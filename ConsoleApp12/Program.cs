@@ -189,3 +189,397 @@ namespace ConsoleApp303
         }
     }
 }
+
+////////////////////////////////
+////////////////////////////////
+///////////////////////////////
+/////
+
+
+//using System.Collections;
+
+//namespace G03_20210221
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            //Hashtable market = new Hashtable();
+//            Dictionary<string, Product> market = new Dictionary<string, Product>();
+
+//            Product p1 = new Product("P001", "Apple", 5);
+//            market.Add("P001", p1);
+
+//            Product p2 = new Product("P002", "Banana", 20);
+//            market.Add(p2.Code, p2);
+
+//            market.Add("P003", new Product("P003", "Orange", 3.5));
+//            market.Add("P004", new Product("P004", "Strawberry", 1));
+//            market.Add("P005", new Product("P005", "Pear", 7));
+
+//            //tu eseti key aris mashin tavze gadaawers values, tu arada daamatebs.
+//            market["P006"] = new Product("P006", "Pineapple", 21);
+
+//            foreach (var item in market)
+//            {
+//                Console.WriteLine($"{item.Key}: {item.Value}");
+//            }
+//        }
+//    }
+
+//    class Product
+//    {
+//        public string Code { get; private init; }
+//        public string Name { get; set; }
+//        public double Price { get; set; }
+
+//        public Product(string code)
+//        {
+//            ArgumentNullException.ThrowIfNull(code, nameof(code));
+//            Code = code;
+//        }
+
+//        public Product(string code, string name, double price) : this(code)
+//        {
+//            Name = name;
+//            Price = price;
+//        }
+
+//        public override string ToString()
+//        {
+//            return $"Code: {Code}, Name: {Name}, Price: {Price:0.00}";
+//        }
+//    }
+//}
+///////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////
+//using System.Collections;
+
+//namespace G03_20210221
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            //Hashtable market = new Hashtable();
+//            Dictionary<string, Product> market = new Dictionary<string, Product>();
+
+//            Product p1 = new Product("P001", "Apple", 5);
+//            market.Add("P001", p1);
+
+//            Product p2 = new Product("P002", "Banana", 20);
+//            market.Add(p2.Code, p2);
+
+//            market.Add("P003", new Product("P003", "Orange", 3.5));
+//            market.Add("P004", new Product("P004", "Strawberry", 1));
+//            market.Add("P005", new Product("P005", "Pear", 7));
+
+//            //tu eseti key aris mashin tavze gadaawers values, tu arada daamatebs.
+//            market["P006"] = new Product("P006", "Pineapple", 21);
+
+//            //elementis dzebna da downcasti product - ze
+//            while (true)
+//            {
+//                // klaviaturidan sadziebo kodis sheyvana
+//                Console.Write("Enter Code: ");
+//                string key = Console.ReadLine().ToUpper();
+
+//                if (key == "EXIT")
+//                {
+//                    break;
+//                }
+
+//                if (market.TryGetValue(key, out Product? product))
+//                {
+//                    Console.WriteLine(product);
+//                }
+//                else
+//                {
+//                    Console.WriteLine("Product not found.");
+//                }
+//            }
+//        }
+//    }
+
+//    class Product
+//    {
+//        public string Code { get; private init; }
+//        public string Name { get; set; }
+//        public double Price { get; set; }
+
+//        public Product(string code)
+//        {
+//            ArgumentNullException.ThrowIfNull(code, nameof(code));
+//            Code = code;
+//        }
+
+//        public Product(string code, string name, double price) : this(code)
+//        {
+//            Name = name;
+//            Price = price;
+//        }
+
+//        public override string ToString()
+//        {
+//            return $"Code: {Code}, Name: {Name}, Price: {Price:0.00}";
+//        }
+//    }
+//}
+
+/////////////////////////////
+////////////////////////////
+////////////////////////////
+/////
+//using System.Collections;
+
+//namespace G03_20210221
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            //Hashtable market = new Hashtable();
+//            Dictionary<string, Product> market = new Dictionary<string, Product>();
+
+//            Product p1 = new Product("P001", "Apple", 5);
+//            market.Add("P001", p1);
+
+//            Product p2 = new Product("P002", "Banana", 20);
+//            market.Add(p2.Code, p2);
+
+//            market.Add("P003", new Product("P003", "Orange", 3.5));
+//            market.Add("P004", new Product("P004", "Strawberry", 1));
+//            market.Add("P005", new Product("P005", "Pear", 7));
+
+//            //tu eseti key aris mashin tavze gadaawers values, tu arada daamatebs.
+//            market["P006"] = new Product("P006", "Pineapple", 21);
+
+//            //elementis dzebna da downcasti product - ze
+//            while (true)
+//            {
+//                // klaviaturidan sadziebo kodis sheyvana
+//                Console.Write("Enter Code: ");
+//                string key = Console.ReadLine().ToUpper();
+
+//                if (key == "EXIT")
+//                {
+//                    break;
+//                }
+
+//                if (market.ContainsKey(key))
+//                {
+//                    var p = market[key];
+//                    Console.WriteLine(p);
+//                }
+//                else
+//                {
+//                    Console.WriteLine("Not Found, Try Again");
+//                }
+//            }
+//        }
+//    }
+
+//    class Product
+//    {
+//        public string Code { get; private init; }
+//        public string Name { get; set; }
+//        public double Price { get; set; }
+
+//        public Product(string code)
+//        {
+//            ArgumentNullException.ThrowIfNull(code, nameof(code));
+//            Code = code;
+//        }
+
+//        public Product(string code, string name, double price) : this(code)
+//        {
+//            Name = name;
+//            Price = price;
+//        }
+
+//        public override string ToString()
+//        {
+//            return $"Code: {Code}, Name: {Name}, Price: {Price:0.00}";
+//        }
+//    }
+////}
+///////////////////////////
+//////////////////////////////////////
+////
+//////////////////////////////////
+
+//using System.Collections;
+
+//namespace G09_20260501
+//{
+//    internal class Program
+//    {
+//        static void Main()
+//        {
+
+//        }
+//    }
+
+//    public abstract class MyCollection<T> : ICollection<T>
+//    {
+//        public void Clear()
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public bool Contains(T item)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public void CopyTo(T[] array, int arrayIndex)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        void ICollection<T>.Add(T item)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        bool ICollection<T>.Remove(T item)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public IEnumerator<T> GetEnumerator()
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public int Count { get; }
+
+//        public bool IsReadOnly { get; }
+
+//        IEnumerator IEnumerable.GetEnumerator()
+//        {
+//            return GetEnumerator();
+//        }
+//    }
+
+//    public class MyList<T> : MyCollection<T>, IList<T>
+//    {
+//        public void Add(T item)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public bool Remove(T item)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public void Insert(int index, T item)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public void RemoveAt(int index)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public int IndexOf(T item)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public int IndexOf(T item, int startIndex)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public T this[int index]
+//        {
+//            get => throw new NotImplementedException();
+//            set => throw new NotImplementedException();
+//        }
+//    }
+
+//    public class MyQueue<T> : MyCollection<T>
+//    {
+//        public void Enqueue(T item)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public T Dequeue()
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public T Peek()
+//        {
+//            throw new NotImplementedException();
+//        }
+//    }
+
+//    public class MyStack<T> : MyCollection<T>
+//    {
+//        public void Push(T item)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public T Pop()
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public T Peek()
+//        {
+//            throw new NotImplementedException();
+//        }
+//    }
+
+//    public class MyEnumerator<T> : IEnumerator<T>
+//    {
+//        public T Current => throw new NotImplementedException();
+
+//        public bool MoveNext()
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public void Reset()
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public void Dispose()
+//        {
+//            // For now leave it blank!
+//        }
+
+//        object IEnumerator.Current => Current;
+//    }
+
+//    public class MyStackEnumerator<T> : IEnumerator<T>
+//    {
+//        public T Current => throw new NotImplementedException();
+
+//        public bool MoveNext()
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public void Reset()
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public void Dispose()
+//        {
+//            // For now leave it blank!
+//        }
+
+//        object IEnumerator.Current => Current;
+//    }
+//}
